@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres&defaultdb?createDatabaseIfNotExist=true
+    username: postgres
+    password: postgres
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL95Dialect
+        order_inserts: true
+        order_updates: true
+        batch_versioned_data: true
+        id:
+          new_generator_mappings: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    hibernate:
+      ddl-auto: validate
+      use-new-id-generator-mappings: true
+    database: postgresql
+#  flyway:
+#    locations: classpath:/db/migrations
+#    user: postgres
+#    password: postgres
+#    schemas: postgres
+  flyway:
+#    locations: classpath:/db/migrations
+    url: 'jdbc:postgresql://localhost:5432/postgres'
+    user: postgres
+    password: postgres
+    enabled: true
+server:
+  port: 8080
+  servlet:
+    context-path: /rest
+custom:
+
+

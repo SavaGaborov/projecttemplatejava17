@@ -1,1 +1,1 @@
-# projecttemplatejava17
+# spring-boot-boilerplate-java17
