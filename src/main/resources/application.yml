@@ -41,10 +41,10 @@ custom:
   jwt-audience: 'lvh.me'
   salt: '$2a$10$XeMQWfXrTEzrlWg6d9Vm8u'
   digital-ocean:
-    access-key: 'DKDSA6HPNGMB24GQZJDO'
-    secret-key: '/DmZhK34I/xSjiA6ewfIV59TIf1ObOGScnbRAD1OQT0'
-    bucket: 'checkback-dev'
+    access-key: 'a'
+    secret-key: 'b'
+    bucket: 'bojantransstore-dev'
     region: 'fra1'
-    url: 'digitaloceanspaces.com'
+    url: 'bojantransstorespaces.com'
 
 
