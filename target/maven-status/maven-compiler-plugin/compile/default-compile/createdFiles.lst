@@ -29,12 +29,14 @@ template/java17/util/TimeUtil.class
 template/java17/configuration/WebConfiguration.class
 template/java17/service/authentication/exception/CredentialsInvalidException.class
 template/java17/component/impl/BCryptPasswordEncoder.class
+template/java17/domain/User$UserBuilder.class
 template/java17/component/PasswordEncoder.class
 template/java17/component/impl/JwtTokenEncoder.class
 template/java17/web/rest/exception/ExceptionResponse.class
 template/java17/configuration/PersistenceHibernateConfiguration.class
 template/java17/configuration/security/WebSecurityConfiguration.class
 template/java17/Java17Application.class
+template/java17/repository/UserRepository.class
 template/java17/configuration/security/JwtRequestFilter.class
 template/java17/configuration/security/ApiKeyAuthenticationToken.class
 template/java17/web/rest/exception/RestExceptionHandler.class

@@ -19,13 +19,7 @@ spring:
       ddl-auto: validate
       use-new-id-generator-mappings: true
     database: postgresql
-#  flyway:
-#    locations: classpath:/db/migrations
-#    user: postgres
-#    password: postgres
-#    schemas: postgres
   flyway:
-#    locations: classpath:/db/migrations
     url: 'jdbc:postgresql://localhost:5432/postgres'
     user: postgres
     password: postgres
@@ -35,5 +29,22 @@ server:
   servlet:
     context-path: /rest
 custom:
+  env: 'dev'
+  test: true
+  support-mail: 'support@email.com'
+  swagger-url: 'localhost:8080'
+  server-url: 'http://bojantrans.store.com/rest'
+  frontend-url: 'http://bojantrans.store.com'
+  website: 'https://bojantrans.store.com'
+  jwt-signing-key: 'gnZbuW8ctpTWaebRmReAky4TLs4h7YTBYPeJGf5FTpSEuHZ8buxYpV7HPp9EE778GfqKRRTNcYn2jQbdVBzcavvFX3B47gteLDLvM7tmGKSH7Q4WsbKNX9zHMSbKqqJDfYkzqysymy6ftP7TZy2Yj8KwD5sseQM4Q3wyxGCENFbTzr5PRMKqfC6sDckB8sNDnxRpfY3JbmSTC2XM77sVqaapCVhWjD4cthhaAj8KuKGAC2tN5NgtAdUqWMLGY8Ns'
+  jwt-validity: 180
+  jwt-audience: 'lvh.me'
+  salt: '$2a$10$XeMQWfXrTEzrlWg6d9Vm8u'
+  digital-ocean:
+    access-key: 'DKDSA6HPNGMB24GQZJDO'
+    secret-key: '/DmZhK34I/xSjiA6ewfIV59TIf1ObOGScnbRAD1OQT0'
+    bucket: 'checkback-dev'
+    region: 'fra1'
+    url: 'digitaloceanspaces.com'
 
 

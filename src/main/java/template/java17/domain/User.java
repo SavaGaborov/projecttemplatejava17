@@ -46,6 +46,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import template.java17.domain.enumeration.LanguageCode;
+import template.java17.domain.enumeration.Role;
 
 @Entity(name = "users")
 @Table(name = "users", indexes = {
@@ -67,4 +69,19 @@ public class User implements Serializable{
     @NotBlank
     @Size(max = 128)
     private String email;
+
+    @Column(nullable = false)
+    @NotNull
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
+    @Builder.Default
+    @Column(nullable = false)
+    @NotNull
+    @Enumerated(EnumType.STRING)
+    private LanguageCode languageCode = LanguageCode.en;
+
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return Collections.singletonList(new SimpleGrantedAuthority(role.name()));
+    }
 }
