@@ -39,7 +39,7 @@ custom:
   jwt-signing-key: 'gnZbuW8ctpTWaebRmReAky4TLs4h7YTBYPeJGf5FTpSEuHZ8buxYpV7HPp9EE778GfqKRRTNcYn2jQbdVBzcavvFX3B47gteLDLvM7tmGKSH7Q4WsbKNX9zHMSbKqqJDfYkzqysymy6ftP7TZy2Yj8KwD5sseQM4Q3wyxGCENFbTzr5PRMKqfC6sDckB8sNDnxRpfY3JbmSTC2XM77sVqaapCVhWjD4cthhaAj8KuKGAC2tN5NgtAdUqWMLGY8Ns'
   jwt-validity: 180
   jwt-audience: 'lvh.me'
-  salt: '$2a$10$XeMQWfXrTEzrlWg6d9Vm8u'
+  salt: '$2a$10$XeMQWfXrTEzrlWg6d2Vm3u'
   digital-ocean:
     access-key: 'a'
     secret-key: 'b'
