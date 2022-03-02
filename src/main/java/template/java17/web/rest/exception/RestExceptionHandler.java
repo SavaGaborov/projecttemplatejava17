@@ -1,6 +1,5 @@
 package template.java17.web.rest.exception;
 
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -19,6 +18,8 @@ import template.java17.configuration.exception.ApplicationMainException;
 import template.java17.service.authentication.exception.CredentialsInvalidException;
 import template.java17.service.authentication.exception.EmailExistsException;
 import template.java17.service.user.exception.UserNotFoundException;
+
+import javax.servlet.http.HttpServletRequest;
 
 import java.util.ArrayList;
 import java.util.List;

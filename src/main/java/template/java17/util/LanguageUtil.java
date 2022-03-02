@@ -5,7 +5,7 @@ import template.java17.domain.enumeration.LanguageCode;
 
 import java.util.Locale;
 
-public class LanguageUtil {
+public final class LanguageUtil {
 
     private LanguageUtil() {
 

@@ -1,6 +1,6 @@
 package template.java17.util;
 
-public class ConstantsUtil {
+public final class ConstantsUtil {
 
     private ConstantsUtil() {
     }

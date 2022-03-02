@@ -1,8 +1,6 @@
 package template.java17.web.rest.exception;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.AccessDeniedException;
@@ -10,6 +8,8 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.access.AccessDeniedHandler;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStream;
 
@@ -17,7 +17,7 @@ import static template.java17.util.HttpUtil.getLocaleFromHeader;
 
 
 @AllArgsConstructor
-public class RestAuthenticationEntryPoint implements AuthenticationEntryPoint, AccessDeniedHandler   {
+public class RestAuthenticationEntryPoint implements AuthenticationEntryPoint, AccessDeniedHandler {
 
     private final String locationUrl;
     private final ObjectMapper objectMapper;
@@ -34,19 +34,16 @@ public class RestAuthenticationEntryPoint implements AuthenticationEntryPoint, A
         handleUnauthorized(httpServletRequest, httpServletResponse);
     }
 
-    private void handleUnauthorized(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse)
-            throws IOException {
+    private void handleUnauthorized(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws IOException {
         handle(httpServletRequest, httpServletResponse, "access.denied", HttpStatus.UNAUTHORIZED);
     }
 
-    public void handleRedirect(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse)
-            throws IOException {
+    public void handleRedirect(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws IOException {
         handle(httpServletRequest, httpServletResponse, "resource.moved", HttpStatus.MOVED_PERMANENTLY);
     }
 
     public void handle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
-                       String resourceBundleKey, HttpStatus httpStatus)
-            throws IOException {
+                       String resourceBundleKey, HttpStatus httpStatus) throws IOException {
         ExceptionResponse exceptionResponse = new ExceptionResponse(resourceBundleKey,
                 getLocaleFromHeader(httpServletRequest),
                 httpStatus);

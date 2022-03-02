@@ -1,10 +1,6 @@
 package template.java17.configuration.security;
 
 import io.jsonwebtoken.Claims;
-import jakarta.servlet.FilterChain;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -16,8 +12,11 @@ import template.java17.domain.User;
 import template.java17.repository.UserRepository;
 import template.java17.web.rest.exception.RestAuthenticationEntryPoint;
 
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.time.ZoneOffset;
 import java.util.Optional;
 
 import static template.java17.configuration.security.WebSecurityConfiguration.UNSECURED_APIS;
@@ -32,7 +31,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
-                                    FilterChain filterChain) throws ServletException, IOException {
+                                    FilterChain filterChain) throws IOException, ServletException {
         UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = null;
         try {
             final String authorizationHeader = httpServletRequest.getHeader("Authorization");

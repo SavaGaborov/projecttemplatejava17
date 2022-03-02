@@ -1,9 +1,5 @@
 package template.java17.configuration.security;
 
-import jakarta.servlet.FilterChain;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -13,6 +9,10 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import template.java17.configuration.CustomProperties;
 import template.java17.web.rest.exception.RestAuthenticationEntryPoint;
 
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 import static template.java17.configuration.security.WebSecurityConfiguration.UNSECURED_APIS;

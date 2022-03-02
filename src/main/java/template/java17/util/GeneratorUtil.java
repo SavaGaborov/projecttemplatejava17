@@ -3,7 +3,7 @@ package template.java17.util;
 import java.util.Random;
 import java.util.UUID;
 
-public class GeneratorUtil {
+public final class GeneratorUtil {
 
     private static final String ALPHA_NUMERIC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
             + "0123456789"

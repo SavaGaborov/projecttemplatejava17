@@ -1,10 +1,9 @@
 package template.java17.util;
 
-import jakarta.servlet.http.HttpServletRequest;
-
+import javax.servlet.http.HttpServletRequest;
 import java.util.Locale;
 
-public class HttpUtil {
+public final class HttpUtil {
 
     private HttpUtil() {
 

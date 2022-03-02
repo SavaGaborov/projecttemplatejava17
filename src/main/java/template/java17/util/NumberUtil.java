@@ -3,7 +3,7 @@ package template.java17.util;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
-public class NumberUtil {
+public final class NumberUtil {
 
     private NumberUtil() {
     }

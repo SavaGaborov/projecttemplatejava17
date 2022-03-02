@@ -1,18 +1,15 @@
 package template.java17.util;
 
-import org.springframework.stereotype.Component;
-
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-@Component
-public class ResourceBundleUtil {
+public final class ResourceBundleUtil {
 
     private ResourceBundleUtil() {
     }
 
-    private final static String RESOURCE_BUNDLE_CONTENT = "i18n.content";
-    private final static String RESOURCE_BUNDLE_EXCEPTION = "i18n.exception";
+    private static final String RESOURCE_BUNDLE_CONTENT = "i18n.content";
+    private static final String RESOURCE_BUNDLE_EXCEPTION = "i18n.exception";
 
     private final static ResourceBundle.Control resourceControl = new UTF8ResourceBundleControl();
 
